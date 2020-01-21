@@ -1,5 +1,6 @@
 package mcm.edu.ph.filesearch;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import java.io.FileInputStream;
@@ -10,6 +11,7 @@ import java.io.OutputStreamWriter;
 
 import android.util.Size;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
@@ -86,4 +88,5 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
+}
 }
