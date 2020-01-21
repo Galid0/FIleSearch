@@ -11,7 +11,6 @@ import java.io.OutputStreamWriter;
 
 import android.util.Size;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
