@@ -1,0 +1,116 @@
+     <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/ageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="age"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        // Answers
+
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ageTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ageText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/monthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="birthmonth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageText" />
+
+    <TextView
+        android:id="@+id/yearText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="birthyear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monthText" />
+
+
+    <TextView
+        android:id="@+id/cashText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyCash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yearText" />
+
+    <TextView
+        android:id="@+id/inaRelationshipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="inaRelationship"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cashText" />
+
+    <TextView
+        android:id="@+id/middleInitialText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="middleInintail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inaRelationshipText" />
+    //Answer
+
+    <TextView
+        android:id="@+id/birthmonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="monthTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/yearText"
+        app:layout_constraintTop_toBottomOf="@+id/age" />
+
+    <TextView
+        android:id="@+id/birthyear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yearTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cashText"
+        app:layout_constraintTop_toBottomOf="@+id/Mycash" />
+
+    <TextView
+        android:id="@+id/Mycash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cashTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/monthText"
+        app:layout_constraintTop_toBottomOf="@+id/birthmonth" />
+
+    <TextView
+        android:id="@+id/inaRelationdship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="inaRelationshipTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inaRelationshipText"
+        app:layout_constraintTop_toBottomOf="@+id/birthyear" />
+
+    <TextView
+        android:id="@+id/middleInitial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="middelInitialTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/middleInitialText"
+        app:layout_constraintTop_toBottomOf="@+id/inaRelationdship" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
