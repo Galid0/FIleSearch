@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
 
+import android.os.Environment;
+
 public class MainActivity extends AppCompatActivity {
 
     static final int READ_BLOCK_SIZE = 100;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText Box = findViewById(R.id.Box);
         final Button Read = findViewById(R.id.Read);
         final Button buttonclr = findViewById(R.id.Clear);
-        final Button Write = findViewById(R.id.Write);
+        final Button buttonwrt = findViewById(R.id.Write);
 
 
         buttonclr.setOnClickListener(
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-        Write.setOnClickListener(
+        buttonwrt.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -86,6 +88,28 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+        if (!isExternalStorageAvailable() || isExternalStorageReadOnly()) {
+            buttonwrt.setEnabled(false);
+}
+
+    }
+    public static boolean isExternalStorageReadOnly() {
+        String extStorageState = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(extStorageState)) {
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean isExternalStorageAvailable() {
+        String extStorageState = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(extStorageState)) {
+            return true;
+        }
+        return false;
     }
 }
-}
+
+
+
+
