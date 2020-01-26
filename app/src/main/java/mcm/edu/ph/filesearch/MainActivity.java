@@ -1,6 +1,7 @@
 package mcm.edu.ph.filesearch;
 
 
+import java.io.File;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import java.io.FileInputStream;
@@ -16,10 +17,16 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import android.os.Environment;
+import  java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
     static final int READ_BLOCK_SIZE = 100;
+
+    private String filename = "Galido";
+    private String filepatch = "Galido externalio";
+    File akongFile;
+    String akongGtype="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+                        Toast.makeText(getBaseContext(), "File saved externally",
+                                Toast.LENGTH_SHORT).show();
                     }
                 }
         );
